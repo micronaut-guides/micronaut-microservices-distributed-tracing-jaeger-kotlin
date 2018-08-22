@@ -1,0 +1,7 @@
+In this guide, we are going to integrate https://www.jaegertracing.io[Jaeger] in a Micronaut app composed of three microservices.
+
+____
+As on-the-ground microservice practitioners are quickly realizing, the majority of operational problems that arise when moving to a distributed architecture are ultimately grounded in two areas: networking and observability. It is simply an orders of magnitude larger problem to network and debug a set of intertwined distributed services versus a single monolithic application.
+____
+
+You will discover how Micronaut eases Jaeger integration.

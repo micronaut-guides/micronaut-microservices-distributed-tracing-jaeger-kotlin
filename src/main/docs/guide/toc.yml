@@ -1,0 +1,16 @@
+gettingStarted: 
+  title: Getting Started
+  requirements: What you will need
+  solution: Solution
+writingTheApp:
+  title: Writing the App
+jaeger:
+  title: Jaeger and Micronaut
+  jaegerinstall: Install Jaeger via Docker
+  micronautandjaeger: Integrate Jaeger
+  bookcatalogueChanges: Book Catalogue
+  bookinventoryChanges: Book Inventory
+  bookrecommendationChanges: Book Recommendation
+runningTheApp: Running the app
+nextSteps:
+  title: Next Steps
