@@ -60,7 +60,7 @@ dependencies {
     //end::tracing[]
 
     //tag::jaeger[]
-    compile 'io.jaegertracing:jaeger-thrift:0.31.0'
+    compile 'io.jaegertracing:jaeger-thrift'
     //end::jaeger[]
 
     compile "io.micronaut:micronaut-management"
