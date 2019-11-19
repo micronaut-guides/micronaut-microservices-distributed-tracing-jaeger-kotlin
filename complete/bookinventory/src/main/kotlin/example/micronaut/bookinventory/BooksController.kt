@@ -3,14 +3,12 @@ package example.micronaut.bookinventory
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
+import io.micronaut.http.annotation.Produces
 import io.micronaut.tracing.annotation.ContinueSpan
 import io.micronaut.tracing.annotation.SpanTag
-import io.micronaut.http.annotation.Produces
-import io.micronaut.validation.Validated
+import java.util.*
 import javax.validation.constraints.NotBlank
-import java.util.Optional
 
-@Validated
 @Controller("/books")
 open class BooksController {
 

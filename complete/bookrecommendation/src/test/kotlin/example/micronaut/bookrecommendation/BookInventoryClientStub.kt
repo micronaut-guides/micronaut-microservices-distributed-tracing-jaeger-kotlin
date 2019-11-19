@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank
 @Requires(env = arrayOf(Environment.TEST))
 @Fallback
 @Singleton
-class BookInventoryClientStub : BookInventoryOperations {
+open class BookInventoryClientStub : BookInventoryOperations {
 
     override fun stock(@NotBlank isbn: String): Maybe<Boolean> {
         if (isbn == "1491950358") {

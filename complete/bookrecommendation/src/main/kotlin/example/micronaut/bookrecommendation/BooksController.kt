@@ -6,7 +6,7 @@ import io.reactivex.Flowable
 
 @Controller("/books")
 class BooksController(private val bookCatalogueOperations: BookCatalogueOperations,
-                     private val bookInventoryOperations: BookInventoryOperations) { // <2>
+                      private val bookInventoryOperations: BookInventoryOperations) {
 
     @Get("/")
     fun index(): Flowable<BookRecommendation> {
