@@ -5,11 +5,10 @@ import io.micronaut.http.HttpRequest
 import io.micronaut.http.client.HttpClient
 import io.micronaut.http.client.exceptions.HttpClientException
 import io.micronaut.runtime.server.EmbeddedServer
-import org.jetbrains.spek.api.Spek
-import org.jetbrains.spek.api.dsl.describe
-import org.jetbrains.spek.api.dsl.it
-import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.Assertions.assertTrue
+import org.spekframework.spek2.Spek
+import org.spekframework.spek2.style.specification.describe
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 object BookControllerSpec : Spek({
     describe("BookController Suite") {

@@ -4,15 +4,14 @@ import io.micronaut.context.ApplicationContext
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.client.RxStreamingHttpClient
 import io.micronaut.runtime.server.EmbeddedServer
-import org.jetbrains.spek.api.Spek
-import org.jetbrains.spek.api.dsl.describe
-import org.jetbrains.spek.api.dsl.it
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.spekframework.spek2.Spek
+import org.spekframework.spek2.style.specification.describe
+import kotlin.test.assertEquals
 
-object BookControllerSpec: Spek({
+object BookControllerSpec : Spek({
     describe("BookController Suite") {
-        var embeddedServer : EmbeddedServer = ApplicationContext.run(EmbeddedServer::class.java)
-        var client : RxStreamingHttpClient  = embeddedServer.applicationContext.createBean(RxStreamingHttpClient::class.java, embeddedServer.url)
+        var embeddedServer: EmbeddedServer = ApplicationContext.run(EmbeddedServer::class.java)
+        var client: RxStreamingHttpClient = embeddedServer.applicationContext.createBean(RxStreamingHttpClient::class.java, embeddedServer.url)
 
         it("books can be retrieved") {
             val req = HttpRequest.GET<Any>("/books")
