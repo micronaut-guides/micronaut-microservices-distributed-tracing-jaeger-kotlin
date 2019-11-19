@@ -7,6 +7,8 @@ import io.micronaut.http.client.exceptions.HttpClientException
 import io.micronaut.runtime.server.EmbeddedServer
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
+import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -27,14 +29,11 @@ object BookControllerSpec : Spek({
         }
 
         it("non existing Isbn returns 404") {
-            var exceptionThrown = false
-            try {
+            val ex = assertFailsWith<HttpClientException> {
                 val req = HttpRequest.GET<Any>("/books/stock/XXXXX")
                 client.toBlocking().retrieve(req, Boolean::class.java)
-            } catch (e: HttpClientException) {
-                exceptionThrown = true
             }
-            assertTrue(exceptionThrown)
+            assertEquals("Page Not Found", ex.message)
         }
 
         afterGroup {
