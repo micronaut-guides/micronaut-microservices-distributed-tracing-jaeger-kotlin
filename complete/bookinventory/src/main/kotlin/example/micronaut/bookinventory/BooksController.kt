@@ -15,7 +15,7 @@ open class BooksController {
     @Produces(MediaType.TEXT_PLAIN)
     @Get("/stock/{isbn}")
     @ContinueSpan // <1>
-    open fun stock(@SpanTag("stock.isbn") @NotBlank isbn: String): Boolean? { // <2>
+    open fun stock(@SpanTag("stock.isbn") @NotBlank isbn: String): Boolean? {  // <2>
         return bookInventoryByIsbn(isbn).map { (_, stock) -> stock > 0 }.orElse(null)
     }
 
